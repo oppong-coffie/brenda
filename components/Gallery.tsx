@@ -49,7 +49,7 @@ export default function Gallery() {
       title: "Matatu Canvas & City Typologies",
       caption: "Mobile street art & urban identity",
       handNote: "KBS & Super Metro routes",
-      imageUrl: "/images/sp2.jpg",
+      imageUrl: "/images/bd3.JPG",
     },
     {
       id: 6,
