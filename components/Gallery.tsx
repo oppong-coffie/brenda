@@ -40,7 +40,7 @@ export default function Gallery() {
       title: "Colonial Railway Arcade Facade",
       caption: "1920s stone arches on Haile Selassie Ave",
       handNote: "Built 1928",
-      imageUrl: "/images/bd3.jpg",
+      imageUrl: "/images/bd4.jpg",
     },
     {
       id: 5,
