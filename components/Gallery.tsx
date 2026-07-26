@@ -40,7 +40,7 @@ export default function Gallery() {
       title: "Colonial Railway Arcade Facade",
       caption: "1920s stone arches on Haile Selassie Ave",
       handNote: "Built 1928",
-      imageUrl: "/building6.jpg",
+      imageUrl: "/images/bd1.heic",
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ export default function Gallery() {
       title: "Matatu Canvas & City Typologies",
       caption: "Mobile street art & urban identity",
       handNote: "KBS & Super Metro routes",
-      imageUrl: "/speaker2.jpg",
+      imageUrl: "/images/sp2.jpg",
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ export default function Gallery() {
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
-      imageUrl: "/building5.jpg",
+      imageUrl: "/2.heic",
     },
     {
       id: 10,
