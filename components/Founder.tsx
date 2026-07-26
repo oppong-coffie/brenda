@@ -37,7 +37,7 @@ export default function Founder() {
             <div className="relative group shrink-0">
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#C9963A] bg-[#161616] p-0.5 shadow-2xl relative animate-beacon-pulse">
                 <img
-                  src="/profile.JPG"
+                  src="/images/profile.jpg"
                   alt="Brenda Agungo — Founder & Creative Director"
                   className="w-full h-full object-cover object-center rounded-full grayscale-[15%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 ease-out"
                 />
