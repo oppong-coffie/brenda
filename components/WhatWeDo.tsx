@@ -54,8 +54,8 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
   ];
 
   const urbanLiteracyImages = [
-    "building4.jpg",
-    "building5.jpg",
+    "/building4.jpg",
+    "/building5.jpg",
   ];
 
   return (
