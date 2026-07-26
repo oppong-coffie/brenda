@@ -48,9 +48,8 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
   ];
 
   const speakerSeriesImages = [
-    "/speaker1.jpg",
-    "/speaker2.jpg",
-    "/speaker4.jpg",
+    "/walk7.jpg",
+
   ];
 
   const urbanLiteracyImages = [
