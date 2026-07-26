@@ -31,7 +31,7 @@ export default function Gallery() {
       title: "River Road Hawker Ecosystems",
       caption: "Informal street trade & adaptive space",
       handNote: "Nyamakima grid",
-      imageUrl: "/speaker1.jpg",
+      imageUrl: "/images/sp1.jpg",
     },
     {
       id: 4,
