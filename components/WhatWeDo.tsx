@@ -54,9 +54,6 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
   ];
 
   const urbanLiteracyImages = [
-    "building1.heic",
-    "building2.heic",
-    "building3.heic",
     "building4.jpg",
     "building5.jpg",
   ];
