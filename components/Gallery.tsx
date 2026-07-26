@@ -76,7 +76,7 @@ export default function Gallery() {
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
-      imageUrl: "/bd7.JPG",
+      imageUrl: "/images/bd7.jpg",
     },
     {
       id: 9,
@@ -85,7 +85,7 @@ export default function Gallery() {
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
-      imageUrl: "/images/bd5.JPG",
+      imageUrl: "/images/bd8.jpg",
     },
     {
       id: 10,
@@ -94,7 +94,7 @@ export default function Gallery() {
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
-      imageUrl: "/images/sp7.JPG",
+      imageUrl: "/images/sp9.jpg",
     },
     {
       id: 11,
