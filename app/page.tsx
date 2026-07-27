@@ -8,6 +8,7 @@ import Marquee from "@/components/Marquee";
 import SundayBanner from "@/components/SundayBanner";
 import WhatWeDo from "@/components/WhatWeDo";
 import Story from "@/components/Story";
+import SocialMission from "@/components/SocialMission";
 import Tours from "@/components/Tours";
 import Events from "@/components/Events";
 import Mission from "@/components/Mission";
@@ -67,6 +68,9 @@ export default function Home() {
 
       {/* Social Enterprise Mission Section */}
       <Mission />
+
+      {/* Social Mission Section */}
+      <SocialMission />
 
       {/* Visual Archive Gallery */}
       <Gallery />

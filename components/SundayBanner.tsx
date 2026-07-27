@@ -12,7 +12,7 @@ export default function SundayBanner({ onRegister }: SundayBannerProps) {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0D0D0D] opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0D0D0D]"></span>
         </span>
-        TOURS RUN EVERY SUNDAY · NAIROBI CBD
+        TOURS RUN EVERY SUNDAY · NAIROBI
       </div>
       <span className="font-['Caveat',cursive] text-[18px] font-bold text-[#0D0D0D] opacity-90 hidden sm:inline animate-float-slow">
         ★ small groups · expert-led · all welcome

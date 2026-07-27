@@ -40,21 +40,21 @@ function ChangingImage({ images, alt }: { images: string[]; alt: string }) {
 
 export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
   const walkingTourImages = [
-    "/walk1.jpg",
-    "/walk2.jpg",
-    "/walk6.jpg",
-    "/walk7.jpg",
-    
+    "/images/building6.jpeg",
+    "/images/building7.jpeg",
+    "/images/building9.jpeg",
   ];
 
   const speakerSeriesImages = [
-    "/walk7.jpg",
-
+    "/images/building1.jpeg",
+    "/images/walk1.jpeg",
   ];
 
   const urbanLiteracyImages = [
-    "/building4.jpg",
-    "/building5.jpg",
+    "/images/speaker1.jpeg",
+    "/images/speaker2.jpeg",
+    "/images/speaker3.jpeg",
+    "/images/speaker4.jpeg",
   ];
 
   return (
@@ -90,16 +90,15 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
                 01
               </div>
               <div className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#C9963A] mb-5 group-hover:text-[#C9963A] transition-colors">
-                Flagship Experience
+                CBD . NAIROBI
               </div>
               <h3 className="font-['Bebas_Neue',sans-serif] text-[48px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] mb-4 group-hover:text-[#F4EFE4] transition-colors">
-                WALKING
+                bUILD
                 <br />
                 TOURS
               </h3>
               <p className="font-mono text-[12px] leading-[1.85] text-[#555555] mb-8 group-hover:text-[#F4EFE4]/65 transition-colors max-w-lg">
-                Expert-led walks through Nairobi&apos;s built environment — tracing the colonial grid, postcolonial ambition, informal urban intelligence, and the question of who the city is really designed for.
-              </p>
+Walk through 120 years of decisions. Every building in Nairobi's CBD was someone, for someone, at a specific moment in history. Build Tours teache you to read what they were trying to say.              </p>
             </div>
             <span className="font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] px-6 py-2.5 inline-block self-start group-hover:border-[#C9963A] group-hover:text-[#C9963A] transition-colors">
               Explore Routes →
@@ -108,18 +107,18 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
           <div className="p-[36px] md:p-[52px] flex items-center justify-center bg-[#EDE6D6] group-hover:bg-[#2A2A2A] transition-colors relative overflow-hidden min-h-[280px]">
             <ChangingImage images={walkingTourImages} alt="Nairobi Walking Tour" />
             <span className="absolute bottom-6 right-7 font-['Caveat',cursive] text-[15px] font-bold text-[#C9963A] -rotate-2 group-hover:text-[#F4EFE4] z-10 transition-colors drop-shadow-md">
-              2–3 hrs · Small Groups · CBD
+              5 hrs · Small Groups · CBD
             </span>
           </div>
         </a>
 
         {/* Offering 02 */}
         <a
-          href="#events"
+          href="#story"
           onClick={(e) => {
             if (onSelectOffering) {
               e.preventDefault();
-              onSelectOffering("events");
+              onSelectOffering("story");
             }
           }}
           className="offering grid grid-cols-1 lg:grid-cols-2 border-[1.5px] border-[#0D0D0D] overflow-hidden cursor-pointer group transition-colors duration-300 hover:bg-[#0D0D0D] text-inherit text-decoration-none"
@@ -130,16 +129,15 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
                 02
               </div>
               <div className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#C9963A] mb-5 group-hover:text-[#C9963A] transition-colors">
-                Public Discourse
-              </div>
+SOCIAL MISSION              </div>
               <h3 className="font-['Bebas_Neue',sans-serif] text-[48px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] mb-4 group-hover:text-[#F4EFE4] transition-colors">
-                SPEAKER
+                URBAN
                 <br />
-                SERIES
+                LITERACY
               </h3>
               <p className="font-mono text-[12px] leading-[1.85] text-[#555555] mb-8 group-hover:text-[#F4EFE4]/65 transition-colors max-w-lg">
-                Gatherings bringing together architects, urban planners, historians, community leaders, and residents to interrogate Nairobi&apos;s spatial past and design future.
-              </p>
+Understanding your city matters. It changes hw your vote, how you advocate for your neighbourhood, and how you hold planners and politiciens accountable
+Every premium tour funds urban literacy for evryone-students, community groups, residents, and anyone who has access to this kind of knowledge about their own city.              </p>
             </div>
             <span className="font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] px-6 py-2.5 inline-block self-start group-hover:border-[#C9963A] group-hover:text-[#C9963A] transition-colors">
               View Upcoming Vol. →
@@ -155,11 +153,11 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
 
         {/* Offering 03 */}
         <a
-          href="#mission"
+          href="#events"
           onClick={(e) => {
             if (onSelectOffering) {
               e.preventDefault();
-              onSelectOffering("mission");
+              onSelectOffering("events");
             }
           }}
           className="offering grid grid-cols-1 lg:grid-cols-2 border-[1.5px] border-[#0D0D0D] overflow-hidden cursor-pointer group transition-colors duration-300 hover:bg-[#0D0D0D] text-inherit text-decoration-none"
@@ -170,16 +168,15 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
                 03
               </div>
               <div className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#C9963A] mb-5 group-hover:text-[#C9963A] transition-colors">
-                Education & Research
+                Quarterly Events
               </div>
               <h3 className="font-['Bebas_Neue',sans-serif] text-[48px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] mb-4 group-hover:text-[#F4EFE4] transition-colors">
-                URBAN LITERACY
+                SPEAKER
                 <br />
-                & RESEARCH
+                SERIES
               </h3>
               <p className="font-mono text-[12px] leading-[1.85] text-[#555555] mb-8 group-hover:text-[#F4EFE4]/65 transition-colors max-w-lg">
-                Fostering urban literacy through published guides, mapping workshops, photographic archives, and youth engagements that make spatial thinking accessible to everyone.
-              </p>
+Salon-style conversations on architecture, planning, and who gets to shape Nairobi. Architects, planners, and the communities they design for on the same platform. Both sides of the story, every time.              </p>
             </div>
             <span className="font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] px-6 py-2.5 inline-block self-start group-hover:border-[#C9963A] group-hover:text-[#C9963A] transition-colors">
               Read Our Mission →

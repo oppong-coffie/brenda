@@ -77,7 +77,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
 
   return (
     <section id="direct-booking" className="bg-[#EDE6D6] border-b-[1.5px] border-[#0D0D0D] py-[80px] px-6 md:px-13">
-      <div className="max-w-7xl mx-auto space-y-12">
+      <div className="mx-auto space-y-12">
         {/* Header & Partners */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
           <div>
@@ -134,7 +134,8 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
         </div>
 
         {/* Direct EmailJS Reservation Form Section */}
-        <div id="direct-booking-form" className="bg-[#F4EFE4] border-2 border-[#0D0D0D] p-6 md:p-10 relative shadow-lg">
+      <div className="flex justify-center">
+          <div id="direct-booking-form" className="max-w-4xl  bg-[#F4EFE4] border-2 border-[#0D0D0D] p-6 md:p-10 relative shadow-lg">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 pb-4 border-b border-[#0D0D0D]/20 gap-2">
             <div>
               <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C9963A]">
@@ -144,9 +145,6 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
                 DIRECT RESERVATION FORM
               </h3>
             </div>
-            <span className="font-['Caveat',cursive] text-sm text-[#C9963A] font-bold">
-              Powered by EmailJS · Fast & Secure Booking
-            </span>
           </div>
 
           {/* Status Message Display */}
@@ -285,6 +283,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
             </div>
           </form>
         </div>
+      </div>
       </div>
     </section>
   );

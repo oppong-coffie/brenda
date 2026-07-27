@@ -1,81 +1,93 @@
 export default function Story() {
   return (
     <section
-      id="story"
-      className="bg-[#0D0D0D] text-[#F4EFE4] border-b-[1.5px] border-[#222222] py-[100px] md:py-[120px] px-6 md:px-13 relative overflow-hidden"
+      id="mission"
+      className="bg-[#EBE5D8] text-[#141414] py-16 md:py-14 border-b border-[#D8D1C3] relative overflow-hidden"
     >
-      {/* Background Ghost Text */}
-      <div className="absolute top-1/2 -right-10 -translate-y-1/2 font-['Bebas_Neue',sans-serif] text-[clamp(180px,22vw,320px)] leading-none text-transparent text-outline-ghost-white pointer-events-none select-none z-0">
-        STORY
-      </div>
 
-      {/* Section Tag */}
-      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#C9963A] mb-14 flex items-center gap-3.5 relative z-10">
-        <span className="w-7 h-[1.5px] bg-[#C9963A]" />
-        The Story
-      </div>
 
-      {/* Story Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] lg:gap-[80px] items-center relative z-10">
-        {/* Left: Manifesto Text */}
-        <div>
-          <h2 className="font-['Fraunces',serif] italic text-[clamp(28px,3.5vw,48px)] leading-[1.25] text-[#F4EFE4] mb-[40px]">
-            Nairobi was never designed for its people. It was designed to{" "}
-            <em className="not-italic text-[#C9963A]">extract, segregate, and control.</em>{" "}
-            We are rewriting that relationship.
-          </h2>
-          <div className="font-mono text-[13px] leading-[2] text-[#F4EFE4]/65 space-y-5">
+      <div className="px-6 md:px-14 lg:px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Tag, Headline & Stats Box */}
+          <div className="lg:col-span-6 flex flex-col justify-between h-full">
+            <div>
+              {/* Section Tag */}
+              <div className="font-mono text-xs tracking-[0.25em] uppercase text-[#C2963B] mb-8 flex items-center gap-3">
+                <span className="w-6 h-[1.5px] bg-[#C2963B]" />
+                ABOUT NAIROBI
+              </div>
+
+              {/* Bold Uppercase Headline */}
+              <h2 className="font-['Bebas_Neue',sans-serif] text-[clamp(40px,6vw,80px)] leading-[0.88] tracking-[0.01em] text-[#141414] uppercase mb-12">
+                EVERY CITY<br />
+                IS A TEXT.<br />
+                THIS ONE<br />
+                IS OURS.
+              </h2>
+            </div>
+
+            {/* Stats Box */}
+            <div className="border border-[#1A1A1A] p-3 md:p-3 bg-transparent">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#1A1A1A]/20 sm:divide-[#1A1A1A]">
+                {/* Stat 1 */}
+                <div className="sm:pr-4">
+                  <div className="font-['Bebas_Neue',sans-serif] text-5xl md:text-6xl text-[#C2963B] leading-none mb-2.5">
+                    6
+                  </div>
+                  <p className="font-mono text-[11px] md:text-[12px] text-[#4A4740] leading-snug">
+                    Urban layers readable in one morning&apos;s walk
+                  </p>
+                </div>
+
+                {/* Stat 2 */}
+                <div className="pt-4 sm:pt-0 sm:px-4">
+                  <div className="font-['Bebas_Neue',sans-serif] text-5xl md:text-6xl text-[#C2963B] leading-none mb-2.5">
+                    120
+                  </div>
+                  <p className="font-mono text-[11px] md:text-[12px] text-[#4A4740] leading-snug">
+                    Years of decisions visible from KICC rooftop
+                  </p>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="pt-4 sm:pt-0 sm:pl-4">
+                  <div className="font-['Bebas_Neue',sans-serif] text-5xl md:text-6xl text-[#C2963B] leading-none mb-2.5">
+                    5M+
+                  </div>
+                  <p className="font-mono text-[11px] md:text-[12px] text-[#4A4740] leading-snug">
+                    People whose city this actually is
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Paragraphs */}
+          <div className="lg:col-span-6 font-mono text-[13px] md:text-[14.5px] leading-[1.85] text-[#2C2A26] space-y-7 pt-2 lg:pt-14">
             <p>
-              Founded in 1899 as a railway depot, Nairobi&apos;s spatial layout reflects colonial segregation — racialized zoning, buffer strips, and infrastructure built for administrative dominance rather than human flourishing.
+              Nairobi is one of the few cities on earth where you can read{" "}
+              <strong className="font-bold text-[#141414]">
+                six distinct layers of urban history
+              </strong>{" "}
+              in a single morning&apos;s walk. The colonial grid, postcolonial modernist ambition, South Asian commercial heritage, informal settlement intelligence, new luxury towers, and the emerging climate adaptation story. All of it compressed into one extraordinary geography.
             </p>
+
             <p>
-              Today, <strong className="text-[#F4EFE4]">NBO by Design</strong> uses spatial storytelling, architectural tours, and public forums to equip citizens and visitors with the critical tools to read the city — understanding how power, economics, and culture manifest in brick, mortar, and tarmac.
+              NBO by Design makes that story legible.{" "}
+              <strong className="font-bold text-[#141414]">Urban literacy</strong> — the kind of understanding that changes how you see your city, your vote, your neighbourhood, and every city you visit again.
             </p>
-          </div>
-        </div>
 
-        {/* Right: Key Stats */}
-        <div className="flex flex-col gap-0.5">
-          {/* Stat 01 */}
-          <div className="bg-[#161616] border border-[#2A2A2A] p-8 md:p-10 relative overflow-hidden border-l-[3px] border-l-[#C9963A]">
-            <div className="font-['Bebas_Neue',sans-serif] text-[80px] leading-[0.9] text-[#F4EFE4] tracking-[0.02em]">
-              1899
-            </div>
-            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#C9963A] mt-2">
-              Year Nairobi was founded as a railway camp
-            </div>
-            <div className="font-['Caveat',cursive] text-[13px] font-bold text-[#F4EFE4]/40 mt-1.5">
-              handed down from colonial grid
-            </div>
-          </div>
-
-          {/* Stat 02 */}
-          <div className="bg-[#161616] border border-[#2A2A2A] p-8 md:p-10 relative overflow-hidden border-l-[3px] border-l-[#C9963A]">
-            <div className="font-['Bebas_Neue',sans-serif] text-[80px] leading-[0.9] text-[#F4EFE4] tracking-[0.02em]">
-              3.5M+
-            </div>
-            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#C9963A] mt-2">
-              CBD daily foot traffic
-            </div>
-            <div className="font-['Caveat',cursive] text-[13px] font-bold text-[#F4EFE4]/40 mt-1.5">
-              a walking city needing walkability
-            </div>
-          </div>
-
-          {/* Stat 03 */}
-          <div className="bg-[#161616] border border-[#2A2A2A] p-8 md:p-10 relative overflow-hidden border-l-[3px] border-l-[#C9963A]">
-            <div className="font-['Bebas_Neue',sans-serif] text-[80px] leading-[0.9] text-[#F4EFE4] tracking-[0.02em]">
-              100%
-            </div>
-            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-[#C9963A] mt-2">
-              Local & Community-Driven
-            </div>
-            <div className="font-['Caveat',cursive] text-[13px] font-bold text-[#F4EFE4]/40 mt-1.5">
-              reinvested into spatial advocacy
-            </div>
+            <p>
+              We ask the question that most tour operators skip:{" "}
+              <strong className="font-bold text-[#141414]">
+                who has the power to shape this city?
+              </strong>{" "}
+              The colonial planner, the postcolonial government, the South Asian merchant who built the streets, the informal builder who had no institutional support. And now, who decides what comes next?
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
+

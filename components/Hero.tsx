@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-6 md:px-13 pb-15 pt-28"
+      className="min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-6 md:px-13 pb-10 pt-28"
     >
       {/* Contour lines background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -46,12 +46,12 @@ export default function Hero() {
 
       {/* Hero Tag */}
       <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#0D0D0D] opacity-85 mb-4 relative z-10 animate-fade-up flex items-center">
-        <span className="inline-block w-2 h-2 rounded-full bg-[#0D0D0D] animate-pulse-dot mr-2.5" />
+        <span className="inline-block w-3 h-3 rounded-full bg-[#0D0D0D] animate-pulse-dot mr-2.5" />
         Nairobi · Urban Design · Social Enterprise · Est. 2025
       </div>
 
       {/* Hero Title */}
-      <h1 className="font-['Bebas Neue',sans-serif] text-[clamp(70px,12vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 mb-6 animate-fade-up">
+      <h1 className="font-[Bebas_Neue] text-[clamp(60px,12vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 animate-fade-up">
         NAIROBI
         <br />
         <span className="text-outline-ink">BY</span>

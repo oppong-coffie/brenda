@@ -25,21 +25,21 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
   return (
     <nav
       id="nav"
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-13 py-5 transition-all duration-400 border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-13 py-3 transition-all duration-400 border-b ${
         isScrolled
-          ? "bg-[#F4EFE4]/95 backdrop-blur-md border-[#0D0D0D]/10 shadow-xs"
+          ? "bg-black backdrop-blur-md border-[#0D0D0D]/10 shadow-xs"
           : "bg-transparent border-transparent"
       }`}
     >
       {/* Brand Logo */}
-      <a href="#" className="flex flex-col leading-none group text-decoration-none">
-        <span className="font-['Bebas_Neue',sans-serif] text-[22px] tracking-[0.06em] text-[#0D0D0D]">
+      <a href="#" className="leading-none group text-decoration-none">
+        <span className="font-['Bebas_Neue',sans-serif] text-[22px] tracking-[0.06em] text-white">
           NBO
         </span>
         <span className="font-['Caveat',cursive] text-[11px] font-bold text-[#C9963A] leading-tight">
           by
         </span>
-        <span className="font-['Bebas_Neue',sans-serif] text-[22px] tracking-[0.06em] text-[#0D0D0D]">
+        <span className="font-['Bebas_Neue',sans-serif] text-[22px] tracking-[0.06em] text-white">
           DESIGN
         </span>
       </a>
@@ -49,7 +49,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#tours"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             Tours
           </a>
@@ -57,7 +57,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#events"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             Events
           </a>
@@ -65,7 +65,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#story"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             About
           </a>
@@ -73,7 +73,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#mission"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             Mission
           </a>
@@ -81,7 +81,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#gallery"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             Gallery
           </a>
@@ -89,7 +89,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         <li>
           <a
             href="#founder"
-            className="text-[#555555] hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+            className="text-white hover:text-[#0D0D0D] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-[#C9963A] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
           >
             Founder
           </a>
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
               bookSec?.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="font-['Bebas_Neue',sans-serif] text-[16px] tracking-[0.1em] text-[#0D0D0D] border-[1.5px] border-[#0D0D0D] px-5 py-2 hover:bg-[#0D0D0D] hover:text-[#F4EFE4] transition-all duration-300 cursor-pointer group flex items-center gap-1.5 hover-lift animate-btn-shimmer animate-live-btn"
+          className="font-['Bebas_Neue',sans-serif] text-[16px] tracking-[0.1em] text-white border-[1.5px] border-white px-5 py-1 hover:bg-[#0D0D0D] hover:text-[#F4EFE4] transition-all duration-300 cursor-pointer group flex items-center gap-1.5 hover-lift animate-btn-shimmer animate-live-btn"
         >
           <span>Book a Tour</span>
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>

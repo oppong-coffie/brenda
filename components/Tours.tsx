@@ -1,210 +1,193 @@
 "use client";
 
-import { useState } from "react";
-
 interface ToursProps {
   onBookTour?: (tourName: string) => void;
 }
 
 export default function Tours({ onBookTour }: ToursProps) {
-  const [selectedItinerary, setSelectedItinerary] = useState<number | null>(null);
-
   const tours = [
     {
       num: "01",
-      title: "THE COLONIAL GRID & THE POSTCOLONIAL SKYLINE",
-      tag: "CBD Core Route",
-      body: "Trace how British colonial master plans shaped modern Nairobi's CBD. From the railway administration headquarters to the modernist monuments of independence like KICC and Kencom House.",
-      details: "Duration: 2.5 Hours · Distance: 3.2 KM · Meeting Point: Kipande House",
-      note: "Most Popular Walk!",
-      bgImage: "/walk7.jpg",
-      stops: [
-        { name: "Kipande House", desc: "1913 stone landmark where native African passbooks were issued under colonial rule." },
-        { name: "Macmillan Memorial Library", desc: "Neo-classical monument reflecting early 20th-century settler architecture." },
-        { name: "Kencom House", desc: "Postcolonial banking hub & central transportation node." },
-        { name: "KICC & Helipad Viewpoint", desc: "1973 Brutalist tower inspired by the African lotus flower and traditional huts." },
-      ],
+      category: "POWER & GOVERNANCE",
+      title: "POWER & GOVERNANCE",
+      body: "Follow the seat of state power from KICC to Parliament. Every step was built to project authority, control resources, or organize power over people. Includes sites where movement held critical detention chambers.",
+      route: "KICC to Parliament",
+      duration: "5 hours",
+      tag: "Political City",
+      bgImage: "/images/building6.jpeg",
+      featured: true,
     },
     {
       num: "02",
-      title: "MARKETS, MATATUS & INFORMAL INTELLIGENCE",
-      tag: "Urban Economy Route",
-      body: "Explore how informal networks, hawker economies, and matatu culture subvert and adapt formal urban planning across River Road, Nyamakima, and City Market.",
-      details: "Duration: 3 Hours · Distance: 4.0 KM · Meeting Point: City Market",
-      note: "Deep Dive into City Life",
-      bgImage: "/walk6.jpg",
-      stops: [
-        { name: "City Market Vaults", desc: "1930s concrete parabolic arches designed by British engineers." },
-        { name: "Nyamakima Hawker Grid", desc: "High-density informal trade hubs powering Kenya's micro-economy." },
-        { name: "River Road Matatu Depots", desc: "Mobile street art, custom sound systems & transit design culture." },
-      ],
+      category: "HERITAGE",
+      title: "HERITAGE BUILDINGS",
+      body: "Learn how the Railway Bank Association, Colonial Archives, and Old City Hall were designed to impress and project authority. Every stone is archival material showing how early colonial administration shaped local African, South-Asian, or European trade.",
+      route: "Railway Avenue to Jeevanjee Gardens",
+      duration: "5 hours",
+      tag: "Architectural Heritage",
+      bgImage: "/images/building1.jpeg",
+      featured: false,
     },
     {
       num: "03",
-      title: "GREEN NAIROBI: PARKS, BUFFER ZONES & SPATIAL JUSTICE",
-      tag: "Public Space Route",
-      body: "Examine the history of Nairobi's green spaces — Uhuru Park, Jeevanjee Gardens, and Central Park — as arenas of political struggle, public gathering, and civic resistance.",
-      details: "Duration: 2 Hours · Distance: 2.5 KM · Meeting Point: Jeevanjee Gardens",
-      note: "Relaxed & Discussion Heavy",
-      bgImage: "/walk2.jpg",
-      stops: [
-        { name: "Jeevanjee Gardens", desc: "Donated in 1906 by A.M. Jeevanjee as a public sanctuary for all races." },
-        { name: "Central Park Boulevard", desc: "Postcolonial civic lawn & urban canopy buffer." },
-        { name: "Uhuru Park Freedom Corner", desc: "Historical site of Wangari Maathai's environmental activism against high-rise encroachment." },
-      ],
+      category: "ARCHITECTURE",
+      title: "NAIROBI THEN AND NOW",
+      body: "The glass skyscrapers side by side with colonial stone public towers, the government building back to the private corporate. Every era building on top of older layers which changes how your eyes view how a city moves these streets and for whom.",
+      route: "CBD Business Core",
+      duration: "5 hours",
+      tag: "Modernism",
+      bgImage: "/images/building7.jpeg",
+      featured: false,
+    },
+    {
+      num: "04",
+      category: "HISTORY",
+      title: "INDIAN HERITAGE & COMMERCIAL NETWORKS",
+      body: "The most under-told story in Nairobi's urban history: the South Asian community physically built much of the CBD, financed the first commercial streets, dominated public spaces, and created networks that still run on.",
+      route: "Bazaar Street to Biashara Street",
+      duration: "5 hours",
+      tag: "Cultural History",
+      bgImage: "/images/building9.jpeg",
+      featured: false,
+    },
+    {
+      num: "05",
+      category: "ACTIVISM",
+      title: "INFORMALITY & EVERYDAY URBANISM",
+      body: "Nairobi's buildings. The subject is the street itself. Hawkers, matatu routes, informal commerce, street drainage, improvised storefronts, the edge economy: the city planners designed, and the city residents actually built are two different cities in the same space.",
+      route: "CBD East to Tom Mboya Street",
+      duration: "5 hours",
+      tag: "Urban Economy",
+      bgImage: "/images/walk1.jpeg",
+      featured: false,
+    },
+    {
+      num: "06",
+      category: "COMMUNITY",
+      title: "KIBERA & MUKURU",
+      body: "Walk through two of Africa's largest informal settlements with a community guide who knows them from the inside. These communities built their own infrastructure, drainage networks, and commercial hubs. The spatial intelligence here is extraordinary. This tour is continuous.",
+      route: "Kibera Drive and Mukuru informal settlements",
+      duration: "3 hours",
+      tag: "Community Hub",
+      bgImage: "/images/walk2.jpeg",
+      featured: false,
+    },
+    {
+      num: "07",
+      category: "ARCHITECTURE",
+      title: "RELIGIOUS ARCHITECTURE",
+      body: "Nairobi's CBD contains some of the most architecturally significant religious buildings in East Africa. The Holy Family Basilica, Jamia Mosque, the Sikh Gurdwara, the Jamatkhana, and others represent different streams of belief, identity, and community in the city's history. This tour reads what religious architecture tells us about who has always shaped this city, and how.",
+      route: "CBD religious buildings circuit",
+      duration: "5 hours",
+      tag: "Faith & Community",
+      bgImage: "/images/building8.jpeg",
+      featured: false,
+      spanFull: true,
     },
   ];
-
-  const activeTourData = selectedItinerary !== null ? tours[selectedItinerary] : null;
 
   return (
     <section
       id="tours"
-      className="bg-[#F4EFE4] border-b-[1.5px] border-[#0D0D0D] py-[100px] md:py-[120px] px-6 md:px-13"
+      className="bg-[#EBE5D8] text-[#141414] py-16 md:py-24 px-6 md:px-14 lg:px-20 border-b border-[#D8D1C3]"
     >
-      {/* Section Tag */}
-      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#C9963A] mb-14 flex items-center gap-3.5">
-        <span className="w-7 h-[1.5px] bg-[#C9963A]" />
-        Tours & Experiences
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 md:gap-0">
-        <h2 className="font-['Bebas_Neue',sans-serif] text-[clamp(56px,7vw,96px)] leading-[0.88] tracking-[0.02em] text-[#0D0D0D]">
-          CURATED <span className="text-[#C9963A]">URBAN WALKS</span>
-        </h2>
-        <p className="font-['Fraunces',serif] italic text-[18px] text-[#555555] max-w-[280px] text-left md:text-right leading-[1.5]">
-          Three distinct routes uncovering the layers of Nairobi&apos;s architectural and social history.
-        </p>
-      </div>
-
-      {/* Tour Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
-        {tours.map((t, idx) => (
-          <div
-            key={idx}
-            className="tour-card border-[1.5px] border-[#0D0D0D] p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden group min-h-[500px] hover-lift transition-all duration-300"
-          >
-            {/* Live Indicator Badge for top tour */}
-            {idx === 0 && (
-              <div className="absolute top-4 right-4 z-20 font-mono text-[8px] tracking-widest uppercase bg-[#C9963A] text-[#0D0D0D] px-2.5 py-1 font-bold flex items-center gap-1.5 shadow-md">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0D0D0D] animate-pulse-dot" />
-                Live Walk
-              </div>
-            )}
-            {/* Card Background Image & Overlays */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-              <img
-                src={t.bgImage}
-                alt={t.title}
-                className="w-full h-full object-cover group-hover:opacity-75 group-hover:scale-110 transition-all duration-700 ease-out group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 group-hover:bg-[#0D0D0D]/85 transition-colors duration-400" />
-            </div>
-
-            {/* Card Content Top */}
-            <div className="relative z-10">
-              <div className="font-['Bebas_Neue',sans-serif] text-[100px] leading-[0.85] tracking-[0.04em] text-transparent text-outline-ink-thin opacity-30 group-hover:opacity-60 group-hover:text-outline-paper mb-7 transition-all duration-300">
-                {t.num}
-              </div>
-              <h3 className="font-['Bebas_Neue',sans-serif] text-[34px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] group-hover:text-[#F4EFE4] transition-colors mb-3">
-                {t.title}
-              </h3>
-              <div className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#C9963A] mb-5">
-                {t.tag}
-              </div>
-              <p className="font-mono text-[11.5px] leading-[1.85] text-[#333333] group-hover:text-[#F4EFE4]/80 transition-colors mb-7">
-                {t.body}
-              </p>
-            </div>
-
-            {/* Card Content Bottom */}
-            <div className="relative z-10">
-              <div className="font-mono text-[10px] tracking-[0.08em] text-[#555555] group-hover:text-[#F4EFE4]/70 leading-[2.2] border-t border-[#0D0D0D]/20 group-hover:border-[#F4EFE4]/20 pt-4 mb-6 transition-colors">
-                {t.details}
-              </div>
-
-              <div className="flex flex-wrap gap-2.5">
-                <button
-                  onClick={() => {
-                    if (onBookTour) onBookTour(t.title);
-                    else {
-                      const bookSec = document.getElementById("book");
-                      bookSec?.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="tc-cta font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] group-hover:border-[#C9963A] text-[#0D0D0D] group-hover:text-[#C9963A] px-5 py-2.5 inline-block hover:bg-[#C9963A] hover:text-[#0D0D0D] transition-colors cursor-pointer"
-                >
-                  Book Walk →
-                </button>
-                <button
-                  onClick={() => setSelectedItinerary(idx)}
-                  className="font-mono text-[10px] tracking-[0.12em] uppercase border border-[#0D0D0D]/40 group-hover:border-[#F4EFE4]/40 text-[#0D0D0D] group-hover:text-[#F4EFE4] px-4 py-2.5 hover:border-[#C9963A] transition-colors cursor-pointer"
-                >
-                  View Itinerary
-                </button>
-              </div>
-            </div>
-
-            {/* Hand Note */}
-            <span className="absolute bottom-5 right-6 font-['Caveat',cursive] text-[14px] font-bold text-[#C9963A] group-hover:text-[#F4EFE4] rotate-2 transition-colors z-10">
-              {t.note}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {/* Route Itinerary Modal */}
-      {activeTourData && selectedItinerary !== null && (
-        <div className="fixed inset-0 z-[20000] bg-[#0D0D0D]/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8 animate-fade-up">
-          <div className="bg-[#F4EFE4] border-2 border-[#0D0D0D] p-8 md:p-10 max-w-xl w-full relative shadow-2xl overflow-y-auto max-h-[85vh]">
-            <button
-              onClick={() => setSelectedItinerary(null)}
-              className="absolute top-5 right-5 font-mono text-xs tracking-widest text-[#0D0D0D] border border-[#0D0D0D] w-8 h-8 flex items-center justify-center hover:bg-[#0D0D0D] hover:text-[#F4EFE4] transition-colors cursor-pointer"
-            >
-              ✕
-            </button>
-
-            <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C9963A] mb-2">
-              Route Itinerary · Walk {activeTourData.num}
-            </div>
-            <h3 className="font-['Bebas_Neue',sans-serif] text-3xl md:text-4xl text-[#0D0D0D] leading-none mb-4">
-              {activeTourData.title}
-            </h3>
-
-            <p className="font-mono text-xs text-[#555555] mb-6 leading-relaxed border-b border-[#0D0D0D]/15 pb-4">
-              {activeTourData.details}
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <h4 className="font-mono text-[11px] tracking-wider uppercase text-[#0D0D0D] font-bold">
-                Key Route Stops & Historical Themes:
-              </h4>
-              {activeTourData.stops.map((stop, sIdx) => (
-                <div key={sIdx} className="bg-[#EDE6D6] border border-[#0D0D0D] p-4 font-mono text-xs">
-                  <div className="text-[#C9963A] font-bold mb-1">
-                    Stop {sIdx + 1}: {stop.name}
-                  </div>
-                  <div className="text-[#333333] leading-relaxed">{stop.desc}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex gap-4 items-center">
-              <button
-                onClick={() => {
-                  const tourName = activeTourData.title;
-                  setSelectedItinerary(null);
-                  if (onBookTour) onBookTour(tourName);
-                }}
-                className="w-full font-['Bebas_Neue',sans-serif] text-[18px] tracking-[0.1em] bg-[#0D0D0D] text-[#F4EFE4] py-3 text-center hover:bg-[#C9963A] hover:text-[#0D0D0D] transition-colors cursor-pointer"
-              >
-                Proceed to Book This Walk →
-              </button>
-            </div>
-          </div>
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header Tag */}
+        <div className="font-mono text-xs tracking-[0.25em] uppercase text-[#C2963B] mb-6 flex items-center gap-3">
+          <span className="w-6 h-[1.5px] bg-[#C2963B]" />
+          THE TOURS
         </div>
-      )}
+
+        {/* Section Title */}
+        <div className="mb-12">
+          <h2 className="font-['Bebas_Neue',sans-serif] text-[clamp(44px,5.5vw,80px)] leading-[0.9] tracking-[0.01em] text-[#141414] uppercase mb-4">
+            BUILD TOURS<br />
+            NAIROBI CBD
+          </h2>
+          <p className="font-mono text-[11px] md:text-xs text-[#C2963B] tracking-wide">
+            Filter tour routes on the right side. Select one or more than one...
+          </p>
+        </div>
+
+        {/* Tours Grid Matrix */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {tours.map((t, idx) => (
+            <div
+              key={idx}
+              className={`p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group min-h-[500px] border border-[#1A1A1A] bg-[#0A0A0A] hover:border-[#C2963B] transition-all duration-300 shadow-lg ${
+                t.spanFull ? "md:col-span-3 min-h-[420px]" : ""
+              } ${t.featured ? "border-t-4 border-t-[#C2963B]" : ""}`}
+            >
+              {/* Clear Vivid Background Image */}
+              {t.bgImage && (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                  <img
+                    src={t.bgImage}
+                    alt={t.title}
+                    className="w-full h-full object-cover opacity-75 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-[#0A0A0A]/40 to-[#0A0A0A]/90" />
+                </div>
+              )}
+
+              {/* Featured Badge */}
+              {t.featured && (
+                <div className="absolute top-0 left-0 bg-[#C2963B] text-[#141414] font-mono text-[9px] font-bold tracking-widest uppercase px-3 py-1 z-20 shadow-md">
+                  FEATURED TOUR
+                </div>
+              )}
+
+              {/* Top Number Badge */}
+              <div className="relative z-10 flex justify-end mb-4 pt-2">
+                <div className="font-['Bebas_Neue',sans-serif] text-5xl md:text-6xl text-[#F4EFE4] bg-[#0A0A0A]/80 backdrop-blur-md px-3 py-1 border border-[#F4EFE4]/20 leading-none shadow-md">
+                  {t.num}
+                </div>
+              </div>
+
+              {/* Glassmorphic Panel around Text for 100% Clarity */}
+              <div className="relative z-10 bg-[#0A0A0A]/85 backdrop-blur-md p-6 border border-[#F4EFE4]/15 shadow-2xl space-y-4">
+                <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C2963B] font-semibold">
+                  {t.category}
+                </div>
+
+                <h3 className="font-['Bebas_Neue',sans-serif] text-2xl md:text-3xl text-[#F4EFE4] tracking-wide leading-tight uppercase">
+                  {t.title}
+                </h3>
+
+                <p className="font-mono text-[11.5px] md:text-[12.5px] leading-relaxed text-[#E0DDD5]">
+                  {t.body}
+                </p>
+
+                <div className="font-mono text-[10.5px] text-[#A09C92] space-y-1 border-t border-[#F4EFE4]/15 pt-3">
+                  <div>
+                    <span className="text-[#F4EFE4] font-semibold">Route:</span> {t.route}
+                  </div>
+                  <div>
+                    <span className="text-[#F4EFE4] font-semibold">Duration:</span> {t.duration}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between pt-2 border-t border-[#F4EFE4]/15">
+                  <button
+                    onClick={() => onBookTour && onBookTour(t.title)}
+                    className="font-mono text-[10px] tracking-wider uppercase font-bold text-[#F4EFE4] bg-[#141414] border border-[#F4EFE4]/40 px-3.5 py-1.5 hover:bg-[#C2963B] hover:border-[#C2963B] hover:text-[#141414] transition-colors cursor-pointer"
+                  >
+                    REGISTER INTEREST
+                  </button>
+
+                  <span className="font-mono text-[10px] text-[#C2963B] italic">
+                    [{t.tag}]
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
+
+
+

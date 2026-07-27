@@ -1,134 +1,192 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0D0D0D] text-[#F4EFE4] px-6 md:px-13 pt-[64px] pb-[40px]">
-      {/* Footer Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-[56px]">
-        {/* Brand Column */}
-        <div>
-          <div className="leading-none mb-5">
-            <span className="font-['Bebas_Neue',sans-serif] text-[44px] tracking-[0.05em] block text-[#F4EFE4]">
-              NBO
-            </span>
-            <span className="font-['Caveat',cursive] text-[19px] font-bold text-[#C9963A] block">
-              by
-            </span>
-            <span className="font-['Bebas_Neue',sans-serif] text-[44px] tracking-[0.05em] block text-outline-paper">
+    <footer className="bg-[#0A0A0A] text-[#F4EFE4] relative">
+
+      <div className="px-6 md:px-14 lg:px-20 pt-16 pb-10">
+        {/* Footer Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-16">
+          {/* Brand Column */}
+          <div>
+            <div className="font-['Bebas_Neue',sans-serif] text-3xl md:text-4xl text-[#F4EFE4] tracking-wide uppercase flex items-baseline gap-1.5 mb-4">
+              NBO{" "}
+              <span className="font-['Fraunces',serif] italic lowercase text-2xl text-[#C2963B]">
+                by
+              </span>{" "}
               DESIGN
-            </span>
+            </div>
+            <p className="font-['Fraunces',serif] italic text-xs md:text-[13px] text-[#888888] leading-relaxed max-w-[240px]">
+              Urban literacy through architecture and the streets we share. A social enterprise.<br />
+              Nairobi, Kenya.
+            </p>
           </div>
-          <p className="font-['Fraunces',serif] italic text-[14px] text-[#F4EFE4]/50 leading-[1.6] max-w-[240px]">
-            Uncovering Nairobi&apos;s architectural history, spatial politics, and urban soul.
-          </p>
+
+          {/* Column 1: BUILD TOURS */}
+          <div>
+            <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C2963B] mb-5 font-semibold">
+              BUILD TOURS
+            </h4>
+            <ul className="list-none space-y-2.5 font-mono text-xs text-[#888888]">
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Power & Governance
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Heritage Buildings
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Nairobi Then and Now
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Indian Heritage
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Informality & Streets
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Kibera & Mukuru
+                </a>
+              </li>
+              <li>
+                <a href="#tours" className="hover:text-[#F4EFE4] transition-colors">
+                  Religious Architecture
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 2: ORGANISATION */}
+          <div>
+            <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C2963B] mb-5 font-semibold">
+              ORGANISATION
+            </h4>
+            <ul className="list-none space-y-2.5 font-mono text-xs text-[#888888]">
+              <li>
+                <a href="#story" className="hover:text-[#F4EFE4] transition-colors">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#founder" className="hover:text-[#F4EFE4] transition-colors">
+                  The Founder
+                </a>
+              </li>
+              <li>
+                <a href="#mission" className="hover:text-[#F4EFE4] transition-colors">
+                  Urban Literacy
+                </a>
+              </li>
+              <li>
+                <a href="#social-mission" className="hover:text-[#F4EFE4] transition-colors">
+                  Social Mission
+                </a>
+              </li>
+              <li>
+                <a href="#events" className="hover:text-[#F4EFE4] transition-colors">
+                  Speaker Series
+                </a>
+              </li>
+              <li>
+                <a href="#book" className="hover:text-[#F4EFE4] transition-colors">
+                  Book a Tour
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: CONNECT */}
+          <div>
+            <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C2963B] mb-5 font-semibold">
+              CONNECT
+            </h4>
+            <ul className="list-none space-y-2.5 font-mono text-xs text-[#888888]">
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#F4EFE4] transition-colors"
+                >
+                  @urban.designnbo
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#F4EFE4] transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/+254796941671"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#F4EFE4] transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href="#book" className="hover:text-[#F4EFE4] transition-colors">
+                  Book on Luma
+                </a>
+              </li>
+              <li>
+                <a href="#book" className="hover:text-[#F4EFE4] transition-colors">
+                  Book on Viator
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Column 1: Navigation */}
-        <div>
-          <h4 className="font-mono text-[9px] tracking-[0.2em] uppercase text-[#C9963A] mb-5 pb-2.5 border-b border-[#2A2A2A]">
-            NAVIGATE
-          </h4>
-          <ul className="list-none space-y-0 font-mono text-[11px] tracking-[0.06em] text-[#F4EFE4]/55">
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#tours" className="hover:text-white transition-colors">Tours</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#events" className="hover:text-white transition-colors">Speaker Series</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#story" className="hover:text-white transition-colors">About / Story</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#mission" className="hover:text-white transition-colors">Social Mission</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#founder" className="hover:text-white transition-colors">Founder</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 2: Walk Routes */}
-        <div>
-          <h4 className="font-mono text-[9px] tracking-[0.2em] uppercase text-[#C9963A] mb-5 pb-2.5 border-b border-[#2A2A2A]">
-            WALK ROUTES
-          </h4>
-          <ul className="list-none space-y-0 font-mono text-[11px] tracking-[0.06em] text-[#F4EFE4]/55">
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#tours">Colonial Grid Walk</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#tours">Informal Markets Walk</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#tours">Green Spaces Walk</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors cursor-pointer">
-              <a href="#book">Custom Group Walks</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 3: Contact */}
-        <div>
-          <h4 className="font-mono text-[9px] tracking-[0.2em] uppercase text-[#C9963A] mb-5 pb-2.5 border-b border-[#2A2A2A]">
-            CONTACT
-          </h4>
-          <ul className="list-none space-y-0 font-mono text-[11px] tracking-[0.06em] text-[#F4EFE4]/55">
-            <li className="py-1.5 border-b border-[#1A1A1A]">Nairobi, Kenya</li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors">
-              <a href="mailto:hello@nbobydesign.org">hello@nbobydesign.org</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] hover:text-[#F4EFE4] transition-colors">
-              <a href="tel:+254700000000">+254 700 000 000</a>
-            </li>
-            <li className="py-1.5 border-b border-[#1A1A1A] text-[#C9963A]">
-              WhatsApp Booking Available
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="border-t border-[#2A2A2A] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div className="font-mono text-[10px] tracking-[0.1em] text-[#F4EFE4]/30 text-center sm:text-left">
-          © 2025 NBO BY DESIGN. ALL RIGHTS RESERVED. · NAIROBI, KENYA
-        </div>
-        <div className="flex gap-5">
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-['Bebas_Neue',sans-serif] text-[14px] tracking-[0.1em] text-[#F4EFE4]/40 hover:text-[#C9963A] transition-colors"
-          >
-            INSTAGRAM
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-['Bebas_Neue',sans-serif] text-[14px] tracking-[0.1em] text-[#F4EFE4]/40 hover:text-[#C9963A] transition-colors"
-          >
-            LINKEDIN
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-['Bebas_Neue',sans-serif] text-[14px] tracking-[0.1em] text-[#F4EFE4]/40 hover:text-[#C9963A] transition-colors"
-          >
-            TWITTER/X
-          </a>
-          <a
-            href="https://spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-['Bebas_Neue',sans-serif] text-[14px] tracking-[0.1em] text-[#F4EFE4]/40 hover:text-[#C9963A] transition-colors"
-          >
-            PODCAST
-          </a>
+        {/* Footer Bottom Bar */}
+        <div className="border-t border-[#222222] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-[#555555]">
+          <div>
+            © 2026 NBO by Design · Nairobi, Kenya · Social Enterprise
+          </div>
+          <div className="flex items-center gap-5 text-[#888888]">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#C2963B] transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#C2963B] transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#C2963B] transition-colors"
+            >
+              X
+            </a>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
+

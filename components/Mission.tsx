@@ -1,111 +1,116 @@
-import AnimatedCounter from "./AnimatedCounter";
-
 export default function Mission() {
-  const principles = [
+  const cards = [
     {
       num: "01",
-      title: "COMMUNITY ACCESSIBILITY",
-      body: "We offer sliding-scale pricing and free walking tours for local student groups and community organizations to ensure spatial education is universally accessible.",
+      subtitle: "THE HISTORY",
+      body: "Nairobi was designed as a racially segregated city. Its colonial grid still shapes who lives where, who floods first, and who gets evicted last. Understanding that history is not nostalgia. It is accountability.",
     },
     {
       num: "02",
-      title: "PRESERVING HERITAGE",
-      body: "A portion of proceeds funds digital documentation and oral histories of vulnerable architectural landmarks facing demolition across Nairobi.",
+      subtitle: "THE PRESENT",
+      body: "Every road widening, every demolition, every new flyover is a design decision made by someone with power. Urban literacy means being able to read those decisions. Who benefits. Who pays. Who was not consulted.",
     },
     {
       num: "03",
-      title: "ADVOCACY FOR WALKABILITY",
-      body: "We publish spatial research and policy briefs advocating for safer pedestrian infrastructure, public green spaces, and inclusive urban planning.",
+      subtitle: "THE CLIMATE",
+      body: "Nairobi's flooding is not bad luck. It is the result of planning failures compounded by climate change. As rainfall intensity increases, communities on floodplains and riverbanks face escalating risk. Reading the city means reading that risk.",
+    },
+    {
+      num: "04",
+      subtitle: "THE PROGRAMME",
+      body: "Premium tours fund free urban literacy walks for secondary school students and community groups. Every corporate booking unlocks a free school session for 25 students. A city that understands itself is harder to exploit.",
     },
   ];
 
   return (
     <section
       id="mission"
-      className="bg-[#EDE6D6] border-b-[1.5px] border-[#0D0D0D] py-[100px] md:py-[120px] px-6 md:px-13"
+      className="bg-[#0A0A0A] text-[#F4EFE4] py-16 md:py-24 px-6 md:px-14 lg:px-20 border-b border-[#222222] relative overflow-hidden"
     >
-      {/* Section Tag */}
-      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#C9963A] mb-14 flex items-center gap-3.5">
-        <span className="w-7 h-[1.5px] bg-[#C9963A]" />
-        Social Enterprise Impact
-      </div>
 
-      {/* Live Animated Scroll Counter Bar */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 border-[1.5px] border-[#0D0D0D] bg-[#F4EFE4] p-6 md:p-8">
-        <div className="text-center border-r border-[#0D0D0D]/15 last:border-0 p-2">
-          <div className="font-['Bebas_Neue',sans-serif] text-4xl md:text-5xl text-[#0D0D0D] tracking-wide">
-            <AnimatedCounter end={50} suffix="+" duration={2200} />
-          </div>
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-[#C9963A] mt-1">
-            Walks Conducted
-          </div>
-        </div>
-        <div className="text-center md:border-r border-[#0D0D0D]/15 p-2">
-          <div className="font-['Bebas_Neue',sans-serif] text-4xl md:text-5xl text-[#0D0D0D] tracking-wide">
-            <AnimatedCounter end={3} duration={1800} />
-          </div>
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-[#C9963A] mt-1">
-            Curated Routes
-          </div>
-        </div>
-        <div className="text-center border-r border-[#0D0D0D]/15 p-2">
-          <div className="font-['Bebas_Neue',sans-serif] text-4xl md:text-5xl text-[#0D0D0D] tracking-wide">
-            <AnimatedCounter end={100} suffix="%" duration={2000} />
-          </div>
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-[#C9963A] mt-1">
-            Public Discourse
-          </div>
-        </div>
-        <div className="text-center p-2">
-          <div className="font-['Bebas_Neue',sans-serif] text-4xl md:text-5xl text-[#0D0D0D] tracking-wide">
-            <AnimatedCounter end={1973} duration={2500} />
-          </div>
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-[#C9963A] mt-1">
-            Heritage Archive Year
-          </div>
-        </div>
-      </div>
+      <div className="mx-auto">
+        {/* Top Grid: Headline & Text */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 md:mb-20">
+          {/* Left Column: Tag & Headline */}
+          <div className="lg:col-span-5">
+            {/* Section Tag */}
+            <div className="font-mono text-xs tracking-[0.25em] uppercase text-[#C2963B] mb-8 flex items-center gap-3">
+              <span className="w-6 h-[1.5px] bg-[#C2963B]" />
+              URBAN LITERACY
+            </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-        {/* Left: Mission Text */}
-        <div>
-          <h2 className="font-['Bebas_Neue',sans-serif] text-[clamp(52px,7vw,88px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] mb-7">
-            DESIGN FOR
-            <span className="text-outline-ink block">PUBLIC GOOD</span>
-          </h2>
-          <div className="font-mono text-[13px] leading-[2] text-[#555555] space-y-5">
+            {/* Headline */}
+            <h2 className="font-['Bebas_Neue',sans-serif] text-[clamp(52px,6.5vw,90px)] leading-[0.88] tracking-[0.01em] text-[#F4EFE4] uppercase mb-8">
+              KNOWING<br />
+              YOUR CITY<br />
+              IS A<br />
+              <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #C2963B" }}>
+                RIGHT
+              </span>
+            </h2>
+          </div>
+
+          {/* Right Column: Narrative Copy */}
+          <div className="lg:col-span-7 font-mono text-[12.5px] md:text-[13.5px] leading-[1.8] text-[#A0A0A0] space-y-6 pt-2 lg:pt-14">
             <p>
-              <strong className="text-[#0D0D0D]">NBO by Design</strong> operates as a social enterprise. We believe urban literacy is a democratic right — every resident should have the vocabulary to critique and shape their environment.
+              Nairobi floods every time it rains heavily. In March 2024, flash floods killed at least 71 people across Kenya, 30 of them in Nairobi alone. Informal settlements in Mukuru, Mathare, Kibera, and Huruma were hardest hit. Vehicles were swept away. Homes were submerged. Families lost everything in a single night.
             </p>
+
+            <div className="border-l-2 border-[#C2963B] pl-4 py-3 my-4 bg-[#141414] text-[#C8C8C8] text-[11.5px] md:text-[12.5px] leading-relaxed italic">
+              In Nairobi, approximately 5,500 households were displaced in the March 2024 floods alone. An estimated 10,000 households were affected across the city. The victims died mainly from drowning or electrocution as rivers overflowed their banks. (Kenya Police, March 2024)
+            </div>
+
             <p>
-              By combining commercial architectural tours with open-access research, community workshops, and advocacy, we create a sustainable model for spatial education in Nairobi.
+              These floods are not accidents.{" "}
+              <strong className="font-bold text-[#F4EFE4]">
+                Nairobi was founded on a wet plain and has been building over its own drainage systems ever since.
+              </strong>{" "}
+              Rapid urbanisation, development on floodplains, drainage infrastructure that has not kept pace with the city&apos;s growth, and weak enforcement of land-use planning regulations have created a city that floods its most vulnerable residents every single rainy season.
+            </p>
+
+            <p>
+              As climate change intensifies, this will get worse. Researchers project that extreme rainfall events will become more frequent and more severe across East Africa. The people least responsible for climate change, living in informal settlements on Nairobi&apos;s riverbanks, will pay the highest price.
+            </p>
+
+            <p>
+              <strong className="font-bold text-[#F4EFE4]">
+                Knowing how to read your city is how you protect yourself in it.
+              </strong>{" "}
+              When residents cannot read planning decisions, identify flood-prone land, or challenge infrastructure projects that make flooding worse, they cannot protect themselves or hold anyone accountable. NBO by Design exists to change that.
             </p>
           </div>
         </div>
 
-        {/* Right: Principles Stack */}
-        <div className="flex flex-col gap-0.5">
-          {principles.map((pr, idx) => (
-            <div
-              key={idx}
-              className="principle border-[1.5px] border-[#0D0D0D] p-7 md:p-8 flex gap-5 items-start bg-[#F4EFE4] hover:bg-[#0D0D0D] transition-colors duration-300 group"
-            >
-              <div className="font-['Bebas_Neue',sans-serif] text-[36px] text-[#C9963A] leading-none shrink-0 group-hover:text-[#C9963A] transition-colors">
-                {pr.num}
-              </div>
+        {/* 4 Cards Matrix */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border border-[#222222] divide-y sm:divide-y-0 md:divide-x divide-[#222222] bg-[#111111] mb-20">
+          {cards.map((c, idx) => (
+            <div key={idx} className="p-6 md:p-8 flex flex-col justify-between">
               <div>
-                <h3 className="font-['Bebas_Neue',sans-serif] text-[22px] tracking-[0.04em] text-[#0D0D0D] group-hover:text-[#F4EFE4] transition-colors mb-1.5">
-                  {pr.title}
-                </h3>
-                <p className="font-mono text-[11px] leading-[1.8] text-[#555555] group-hover:text-[#F4EFE4]/65 transition-colors">
-                  {pr.body}
+                <div className="font-['Bebas_Neue',sans-serif] text-5xl md:text-6xl text-[#C2963B] leading-none mb-3">
+                  {c.num}
+                </div>
+                <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#F4EFE4] mb-3 font-semibold">
+                  {c.subtitle}
+                </div>
+                <p className="font-mono text-[11px] md:text-[12px] text-[#888888] leading-relaxed">
+                  {c.body}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom Quote Banner */}
+        <div className="text-center pt-8 border-t border-[#222222]/50">
+          <blockquote className="font-['Fraunces',serif] italic text-2xl md:text-4xl text-[#F4EFE4] max-w-3xl mx-auto mb-4 leading-snug">
+            &ldquo;A city whose residents understand it is harder to exploit.&rdquo;
+          </blockquote>
+          <div className="font-mono text-xs tracking-[0.2em] text-[#C2963B] uppercase">
+            NBO by Design · Urban Literacy Programme
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
