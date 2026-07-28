@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 interface BookingModalProps {
@@ -9,6 +9,18 @@ interface BookingModalProps {
   initialTour?: string;
 }
 
+const TOUR_OPTIONS = [
+  "01: Power & Governance",
+  "02: Heritage Buildings",
+  "03: Nairobi Then and Now",
+  "04: Indian Heritage & Commercial Networks",
+  "05: Informality & Everyday Urbanism",
+  "06: Kibera & Mukuru",
+  "07: Religious Architecture",
+  "Custom Private / Academic Group Walk",
+  "Sunday CBD Walk",
+];
+
 export default function BookingModal({
   isOpen,
   onClose,
@@ -16,7 +28,7 @@ export default function BookingModal({
 }: BookingModalProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [selectedTour, setSelectedTour] = useState(
-    initialTour || "01: The Colonial Grid & Postcolonial Skyline"
+    initialTour || "01: Power & Governance"
   );
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,15 +38,33 @@ export default function BookingModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  useEffect(() => {
+    if (initialTour) {
+      const matched = TOUR_OPTIONS.find(
+        (opt) =>
+          opt.toLowerCase() === initialTour.toLowerCase() ||
+          opt.toLowerCase().includes(initialTour.toLowerCase()) ||
+          initialTour.toLowerCase().includes(opt.toLowerCase().replace(/^0\d:\s*/, ""))
+      );
+      if (matched) {
+        setSelectedTour(matched);
+      } else {
+        setSelectedTour(initialTour);
+      }
+    } else {
+      setSelectedTour("01: Power & Governance");
+    }
+  }, [initialTour, isOpen]);
+
   // Dynamically compute price based on route, guest count & currency
   const getComputedPrice = (tour: string, guestCount: string, curr: "KSH" | "USD") => {
-    if (tour.toLowerCase().includes("speaker") || tour.toLowerCase().includes("free pass")) {
+    if (tour.toLowerCase().includes("speaker") || tour.toLowerCase().includes("free pass") || tour.toLowerCase().includes("ticket") || tour.toLowerCase().includes("vol.")) {
       return curr === "KSH" ? "Free (Ksh 0)" : "Free ($0 USD)";
     }
     
-    let baseKsh = 100;
+    let baseKsh = 4000;
     if (tour.includes("03") || tour.toLowerCase().includes("green")) {
-      baseKsh = 2000;
+      baseKsh = 3500;
     }
 
     let count = 1;
@@ -112,7 +142,7 @@ export default function BookingModal({
               Reservation Form
             </div>
             <h2 className="font-['Bebas_Neue',sans-serif] text-[36px] tracking-[0.03em] text-[#0D0D0D] leading-none mb-6">
-              BOOK A WALKING TOUR
+              BOOK A BUILDING TOUR
             </h2>
 
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 font-mono text-xs">
@@ -127,18 +157,14 @@ export default function BookingModal({
                   onChange={(e) => setSelectedTour(e.target.value)}
                   className="w-full bg-[#EDE6D6] border border-[#0D0D0D] p-3 text-[#0D0D0D] focus:outline-hidden focus:border-[#C9963A]"
                 >
-                  <option value="01: The Colonial Grid & Postcolonial Skyline">
-                    01: The Colonial Grid & Postcolonial Skyline
-                  </option>
-                  <option value="02: Markets, Matatus & Informal Intelligence">
-                    02: Markets, Matatus & Informal Intelligence
-                  </option>
-                  <option value="03: Green Nairobi: Parks & Spatial Justice">
-                    03: Green Nairobi: Parks & Spatial Justice
-                  </option>
-                  <option value="Speaker Series: Free Pass">
-                    Speaker Series: Free Pass
-                  </option>
+                  {TOUR_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                  {!TOUR_OPTIONS.includes(selectedTour) && (
+                    <option value={selectedTour}>{selectedTour}</option>
+                  )}
                 </select>
               </div>
 

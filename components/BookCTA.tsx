@@ -39,7 +39,7 @@ export default function BookCTA({ onOpenBooking, onOpenInquiry }: BookCTAProps) 
             }}
             className="font-['Bebas_Neue',sans-serif] text-[20px] tracking-[0.1em] bg-[#0D0D0D] text-[#F4EFE4] px-10 md:px-13 py-4 md:py-4.5 hover:bg-[#F4EFE4] hover:text-[#0D0D0D] transition-all duration-300 cursor-pointer w-full sm:w-auto hover-lift shadow-xl group flex items-center justify-center gap-2 animate-btn-shimmer animate-live-btn"
           >
-            <span>Book a Walking Tour</span>
+            <span>Book a Building Tour</span>
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
           </button>
           <button

@@ -153,7 +153,7 @@ export default function Gallery() {
         {
       id: 17,
       type: "normal",
-      category: "street",
+      category: "streets",
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
@@ -162,7 +162,7 @@ export default function Gallery() {
         {
       id: 18,
       type: "normal",
-      category: "street",
+      category: "streets",
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
@@ -171,7 +171,7 @@ export default function Gallery() {
         {
       id: 19,
       type: "wide",
-      category: "street",
+      category: "streets",
       title: "KICC & The Modernist Skyline",
       caption: "1973 Brutalist & African Lotus motif tower",
       handNote: "Iconic Nairobi landmark",
@@ -221,7 +221,7 @@ export default function Gallery() {
           NAIROBI <span className="text-[#C9963A]">IN FOCUS</span>
         </h2>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/nbo.by.design"
           target="_blank"
           rel="noopener noreferrer"
           className="gallery-ig-link font-mono text-[11px] tracking-[0.12em] uppercase text-[#C9963A] border border-[#333333] px-5 py-3 flex items-center gap-2.5 hover:bg-[#1A1A1A] hover:border-[#C9963A] transition-colors"

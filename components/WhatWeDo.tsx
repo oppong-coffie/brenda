@@ -93,12 +93,13 @@ export default function WhatWeDo({ onSelectOffering }: WhatWeDoProps) {
                 CBD . NAIROBI
               </div>
               <h3 className="font-['Bebas_Neue',sans-serif] text-[48px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] mb-4 group-hover:text-[#F4EFE4] transition-colors">
-                bUILD
+                BUILD
                 <br />
                 TOURS
               </h3>
               <p className="font-mono text-[12px] leading-[1.85] text-[#555555] mb-8 group-hover:text-[#F4EFE4]/65 transition-colors max-w-lg">
-Walk through 120 years of decisions. Every building in Nairobi's CBD was someone, for someone, at a specific moment in history. Build Tours teache you to read what they were trying to say.              </p>
+                Walk through 120 years of decisions. Every building in Nairobi&apos;s CBD was built by someone, for someone, at a specific moment in history. Build Tours teaches you to read what they were trying to say.
+              </p>
             </div>
             <span className="font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] px-6 py-2.5 inline-block self-start group-hover:border-[#C9963A] group-hover:text-[#C9963A] transition-colors">
               Explore Routes →
@@ -129,15 +130,16 @@ Walk through 120 years of decisions. Every building in Nairobi's CBD was someone
                 02
               </div>
               <div className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#C9963A] mb-5 group-hover:text-[#C9963A] transition-colors">
-SOCIAL MISSION              </div>
+                SOCIAL MISSION
+              </div>
               <h3 className="font-['Bebas_Neue',sans-serif] text-[48px] tracking-[0.03em] leading-[0.9] text-[#0D0D0D] mb-4 group-hover:text-[#F4EFE4] transition-colors">
                 URBAN
                 <br />
                 LITERACY
               </h3>
               <p className="font-mono text-[12px] leading-[1.85] text-[#555555] mb-8 group-hover:text-[#F4EFE4]/65 transition-colors max-w-lg">
-Understanding your city matters. It changes hw your vote, how you advocate for your neighbourhood, and how you hold planners and politiciens accountable
-Every premium tour funds urban literacy for evryone-students, community groups, residents, and anyone who has access to this kind of knowledge about their own city.              </p>
+                Understanding your city matters. It changes how you vote, how you advocate for your neighbourhood, and how you hold planners and politicians accountable. Every premium tour funds urban literacy for everyone — students, community groups, residents, and anyone who deserves access to this kind of knowledge about their own city.
+              </p>
             </div>
             <span className="font-['Bebas_Neue',sans-serif] text-[15px] tracking-[0.1em] border-[1.5px] border-[#0D0D0D] px-6 py-2.5 inline-block self-start group-hover:border-[#C9963A] group-hover:text-[#C9963A] transition-colors">
               View Upcoming Vol. →

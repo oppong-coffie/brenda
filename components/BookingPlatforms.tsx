@@ -15,32 +15,36 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
 
   const platforms = [
     {
-      name: "NBO BY DESIGN",
-      desc: "Official Website",
-      badge: "LIVE",
-      isLive: true,
-      url: "#book",
-    },
-    {
-      name: "AIRBNB",
-      desc: "Top Rated Walk",
-      badge: "VERIFIED",
+      icon: "📅",
+      name: "LUMA",
+      desc: "Direct booking. Fastest way to secure your Sunday spot. RSVP opens weekly.",
+      badge: "• Live Now",
       isLive: false,
-      url: "https://airbnb.com",
+      url: "https://luma.com/xfmia6uc",
     },
     {
+      icon: "💬",
+      name: "WHATSAPP",
+      desc: "Message directly for group bookings, bespoke enquiries, or any questions.",
+      badge: "• Live Now",
+      isLive: false,
+      url: "https://wa.me/+254796941671",
+    },
+    {
+      icon: "🌍",
       name: "VIATOR",
-      desc: "5-Star Rated",
-      badge: "AVAILABLE",
+      desc: "For international travellers. Verified listing, secure payment, English support.",
+      badge: "• Live Now",
       isLive: false,
-      url: "https://viator.com",
+      url: "https://www.viator.com/tours/Nairobi/Who-Designed-Nairobi-Expert-Led-Urban-Design-Walking-Tour-CBD/d5280-5643142P2",
     },
     {
-      name: "GETYOURGUIDE",
-      desc: "Curated Choice",
-      badge: "AVAILABLE",
+      icon: "⭐",
+      name: "TRIPADVISOR",
+      desc: "Find us and leave a review after your walk. Reviews help more people discover NBO.",
+      badge: "• Live Now",
       isLive: false,
-      url: "https://getyourguide.com",
+      url: "https://www.tripadvisor.com/",
     },
   ];
 
@@ -62,7 +66,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
         () => {
           setIsSubmitting(false);
           setStatus("success");
-          setStatusMessage("Asante sana! Your reservation has been sent successfully via EmailJS.");
+          setStatusMessage("Asante sana! Your reservation has been sent successfully.");
           if (form.current) form.current.reset();
         },
         (error) => {
@@ -70,7 +74,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
           console.error("EmailJS Error:", errDetail, error);
           setIsSubmitting(false);
           setStatus("error");
-          setStatusMessage(`Failed to send email (${error?.text || "Please check network connection or EmailJS credentials"}).`);
+          setStatusMessage(`Failed to send reservation (${error?.text || "Please check network connection or try again"}).`);
         }
       );
   };
@@ -79,7 +83,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
     <section id="direct-booking" className="bg-[#EDE6D6] border-b-[1.5px] border-[#0D0D0D] py-[80px] px-6 md:px-13">
       <div className="mx-auto space-y-12">
         {/* Header & Partners */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+        <div className="flex flex-col gap-8">
           <div>
             <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#C9963A] mb-3 flex items-center gap-3">
               <span className="w-6 h-[1.5px] bg-[#C9963A]" />
@@ -93,8 +97,8 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
             </p>
           </div>
 
-          {/* Right Cards Stack */}
-          <div className="flex flex-wrap gap-2 md:gap-3 w-full lg:w-auto">
+          {/* 4 Cards Connected Grid Stack */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-2 border-[#0D0D0D] divide-y sm:divide-y-0 lg:divide-x divide-[#0D0D0D] bg-[#EDE6D6] shadow-md">
             {platforms.map((p, idx) => (
               <a
                 key={idx}
@@ -111,23 +115,24 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
                 }}
                 target={p.isLive ? "_self" : "_blank"}
                 rel="noopener noreferrer"
-                className="platform-card border-[1.5px] border-[#0D0D0D] p-6 text-decoration-none flex flex-col gap-1.5 min-w-[160px] flex-1 sm:flex-initial hover:bg-[#0D0D0D] group transition-colors duration-250 relative bg-[#F4EFE4]"
+                className="p-6 md:p-7 flex flex-col justify-between hover:bg-[#E3D9C4] transition-colors duration-200 text-decoration-none group relative bg-[#EDE6D6]"
               >
-                <div className="font-['Bebas_Neue',sans-serif] text-[26px] tracking-[0.05em] text-[#0D0D0D] group-hover:text-[#F4EFE4] transition-colors">
-                  {p.name}
+                <div>
+                  <div className="text-2xl mb-4">{p.icon}</div>
+                  <h3 className="font-['Bebas_Neue',sans-serif] text-[26px] md:text-[28px] tracking-[0.04em] text-[#0D0D0D] mb-2.5 leading-none">
+                    {p.name}
+                  </h3>
+                  <p className="font-mono text-[11px] md:text-[11.5px] text-[#4A4740] leading-relaxed mb-6">
+                    {p.desc}
+                  </p>
                 </div>
-                <div className="font-mono text-[9px] tracking-[0.1em] uppercase text-[#555555] group-hover:text-[#F4EFE4]/60 transition-colors">
-                  {p.desc}
+
+                <div>
+                  <span className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-wider text-[#2D7A2D] border border-[#2D7A2D] bg-[#2D7A2D]/5 px-2.5 py-1 uppercase font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A2D] animate-pulse" />
+                    Live Now
+                  </span>
                 </div>
-                <span
-                  className={`font-mono text-[8px] tracking-[0.12em] uppercase border px-2 py-0.5 self-start mt-1 transition-colors ${
-                    p.isLive
-                      ? "border-[#2D7A2D] text-[#2D7A2D] group-hover:border-[#5AAD5A] group-hover:text-[#5AAD5A]"
-                      : "border-[#555555] text-[#555555] group-hover:border-[#C9963A] group-hover:text-[#C9963A]"
-                  }`}
-                >
-                  {p.badge}
-                </span>
               </a>
             ))}
           </div>
@@ -205,20 +210,35 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
                 </label>
                 <select
                   name="tour"
-                  defaultValue="01: The Colonial Grid & Postcolonial Skyline"
+                  defaultValue="01: Power & Governance"
                   className="w-full bg-[#EDE6D6] border border-[#0D0D0D] p-3 text-[#0D0D0D] focus:outline-hidden focus:border-[#C9963A]"
                 >
-                  <option value="01: The Colonial Grid & Postcolonial Skyline">
-                    01: The Colonial Grid & Postcolonial Skyline
+                  <option value="01: Power & Governance">
+                    01: Power & Governance
                   </option>
-                  <option value="02: Markets, Matatus & Informal Intelligence">
-                    02: Markets, Matatus & Informal Intelligence
+                  <option value="02: Heritage Buildings">
+                    02: Heritage Buildings
                   </option>
-                  <option value="03: Green Nairobi: Parks & Spatial Justice">
-                    03: Green Nairobi: Parks & Spatial Justice
+                  <option value="03: Nairobi Then and Now">
+                    03: Nairobi Then and Now
+                  </option>
+                  <option value="04: Indian Heritage & Commercial Networks">
+                    04: Indian Heritage & Commercial Networks
+                  </option>
+                  <option value="05: Informality & Everyday Urbanism">
+                    05: Informality & Everyday Urbanism
+                  </option>
+                  <option value="06: Kibera & Mukuru">
+                    06: Kibera & Mukuru
+                  </option>
+                  <option value="07: Religious Architecture">
+                    07: Religious Architecture
                   </option>
                   <option value="Custom Private / Academic Group Walk">
                     Custom Private / Academic Group Walk
+                  </option>
+                  <option value="Sunday CBD Walk">
+                    Sunday CBD Walk
                   </option>
                 </select>
               </div>
@@ -274,10 +294,10 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
                 {isSubmitting ? (
                   <>
                     <span className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent inline-block" />
-                    SENDING RESERVATION VIA EMAILJS...
+                    SENDING RESERVATION...
                   </>
                 ) : (
-                  "CONFIRM & SEND RESERVATION VIA EMAILJS →"
+                  "CONFIRM & SEND RESERVATION →"
                 )}
               </button>
             </div>

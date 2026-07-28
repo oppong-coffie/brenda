@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CustomCursor from "@/components/CustomCursor";
+import SplashIntro from "@/components/SplashIntro";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -39,6 +40,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#F4EFE4] text-[#0D0D0D] relative">
+      {/* Animated Splash Screen Overlay */}
+      <SplashIntro />
+
       {/* Custom Mouse Cursor */}
       <CustomCursor />
 
@@ -60,12 +64,13 @@ export default function Home() {
       {/* Curated Walk Routes Section */}
       <Tours onBookTour={(tourName) => handleOpenBooking(tourName)} />
 
-      {/* Public Speaker Series Section */}
-      <Events onReserveTicket={(eventTitle) => handleOpenBooking(eventTitle)} />
 
       {/* The Story / Manifesto Section */}
       <Story />
 
+      {/* Public Speaker Series Section */}
+      <Events onReserveTicket={(eventTitle) => handleOpenBooking(eventTitle)} />
+        
       {/* Social Enterprise Mission Section */}
       <Mission />
 

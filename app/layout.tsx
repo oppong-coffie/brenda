@@ -31,8 +31,8 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: "NBO by Design — Nairobi's Urban Story",
   description: "NBO by Design is a social enterprise using spatial storytelling, walking tours, and public discourse to explore Nairobi's architectural history, spatial politics, and urban soul.",
-  keywords: ["Nairobi walking tours", "NBO by Design", "Nairobi urban design", "KICC Nairobi", "Brenda Agungo", "Kenya architecture", "Urban literacy Nairobi"],
-  authors: [{ name: "Brenda Agungo" }],
+  keywords: ["Nairobi walking tours", "NBO by Design", "Nairobi urban design", "KICC Nairobi", "Brenda Ngoya", "Kenya architecture", "Urban literacy Nairobi"],
+  authors: [{ name: "Brenda Ngoya" }],
   openGraph: {
     title: "NBO by Design — Nairobi's Urban Story",
     description: "Expert-led walking tours and urban literacy in Nairobi, Kenya.",

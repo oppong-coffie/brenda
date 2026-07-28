@@ -111,17 +111,17 @@ export default function Footer() {
             <ul className="list-none space-y-2.5 font-mono text-xs text-[#888888]">
               <li>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/nbo.by.design"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#F4EFE4] transition-colors"
                 >
-                  @urban.designnbo
+                  @nbo.by.design
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/nbobydesign/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#F4EFE4] transition-colors"
@@ -140,12 +140,22 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#book" className="hover:text-[#F4EFE4] transition-colors">
+                <a
+                  href="https://luma.com/xfmia6uc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#F4EFE4] transition-colors"
+                >
                   Book on Luma
                 </a>
               </li>
               <li>
-                <a href="#book" className="hover:text-[#F4EFE4] transition-colors">
+                <a
+                  href="https://www.viator.com/tours/Nairobi/Who-Designed-Nairobi-Expert-Led-Urban-Design-Walking-Tour-CBD/d5280-5643142P2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#F4EFE4] transition-colors"
+                >
                   Book on Viator
                 </a>
               </li>
@@ -160,7 +170,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-5 text-[#888888]">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/nbo.by.design"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#C2963B] transition-colors"
@@ -168,7 +178,7 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/nbobydesign/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#C2963B] transition-colors"
@@ -176,7 +186,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://x.com"
+              href="https://x.com/brenda_ngoya?s=11"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#C2963B] transition-colors"

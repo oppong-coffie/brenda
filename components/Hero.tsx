@@ -2,17 +2,27 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-6 md:px-13 pb-10 pt-28"
+      className="min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-6 md:px-13 pb-10 pt-28 border-b-2 border-[#0D0D0D]"
     >
-      {/* Contour lines background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Background /splashimage.avif with Ken Burns animation */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img
+          src="/splashimage.avif"
+          alt="Nairobi Urban Design Splash Visual"
+          className="w-full h-full object-cover animate-ken-burns filter brightness-95 contrast-105 opacity-30 mix-blend-overlay"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#C9963A] via-[#C9963A]/90 to-[#C9963A]/60" />
+      </div>
+
+      {/* Contour lines background overlay */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-1">
         <svg
           className="w-full h-full"
           viewBox="0 0 1400 900"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
         >
-          <g stroke="#0D0D0D" strokeWidth="0.7" opacity="0.07">
+          <g stroke="#0D0D0D" strokeWidth="0.7" opacity="0.08">
             <ellipse cx="1050" cy="380" rx="500" ry="220" />
             <ellipse cx="1050" cy="380" rx="430" ry="188" />
             <ellipse cx="1050" cy="380" rx="360" ry="158" />
@@ -21,7 +31,7 @@ export default function Hero() {
             <ellipse cx="1050" cy="380" rx="150" ry="68" />
             <ellipse cx="1050" cy="380" rx="80" ry="38" />
           </g>
-          <g stroke="#0D0D0D" strokeWidth="0.6" opacity="0.05">
+          <g stroke="#0D0D0D" strokeWidth="0.6" opacity="0.06">
             <ellipse cx="180" cy="650" rx="280" ry="130" />
             <ellipse cx="180" cy="650" rx="220" ry="100" />
             <ellipse cx="180" cy="650" rx="160" ry="70" />
@@ -32,26 +42,27 @@ export default function Hero() {
 
       {/* Big ghost text */}
       <div
-        className="absolute top-1/2 -left-2.5 -translate-y-1/2 font-['Bebas_Neue',sans-serif] text-[clamp(220px,28vw,400px)] leading-[0.82] text-transparent text-outline-ghost pointer-events-none select-none tracking-[0.02em] whitespace-nowrap z-0"
+        className="absolute top-1/2 -left-2.5 -translate-y-1/2 font-['Bebas_Neue',sans-serif] text-[clamp(220px,28vw,400px)] leading-[0.82] text-transparent text-outline-ghost pointer-events-none select-none tracking-[0.02em] whitespace-nowrap z-1"
       >
         NBO
       </div>
 
       {/* Floating Live Stamp Badge */}
-      <div className="absolute top-28 right-8 md:right-16 z-20 animate-float-slow hidden sm:flex flex-col items-center justify-center w-24 h-24 rounded-full border border-[#0D0D0D]/40 bg-[#EDE6D6]/50 backdrop-blur-xs text-center p-2 shadow-lg">
-        <span className="font-mono text-[8px] uppercase tracking-widest text-[#0D0D0D]/80">Nairobi</span>
-        <span className="font-['Caveat',cursive] text-lg font-bold text-[#0D0D0D] leading-none">Walks</span>
-        <span className="font-mono text-[7px] uppercase tracking-wider text-[#0D0D0D]/60 font-bold">Est 2025</span>
+      <div className="absolute top-28 right-8 md:right-16 z-20 animate-float-slow hidden sm:flex flex-col items-center justify-center w-28 h-28 rounded-full border-2 border-[#0D0D0D] bg-[#EDE6D6]/80 backdrop-blur-sm text-center p-2 shadow-xl hover:scale-105 transition-transform cursor-pointer">
+        <span className="font-mono text-[8px] uppercase tracking-widest text-[#0D0D0D]/80 font-bold">Nairobi</span>
+        <span className="font-['Caveat',cursive] text-xl font-bold text-[#0D0D0D] leading-none">Walks</span>
+        <span className="font-mono text-[7.5px] uppercase tracking-wider text-[#0D0D0D] font-bold">Est 2025</span>
+        <span className="font-mono text-[7px] text-[#2D7A2D] uppercase font-bold mt-0.5">● Live Tours</span>
       </div>
 
-      {/* Hero Tag */}
-      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#0D0D0D] opacity-85 mb-4 relative z-10 animate-fade-up flex items-center">
-        <span className="inline-block w-3 h-3 rounded-full bg-[#0D0D0D] animate-pulse-dot mr-2.5" />
-        Nairobi · Urban Design · Social Enterprise · Est. 2025
+      {/* Hero Header Meta Tag */}
+      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#0D0D0D] opacity-90 mb-4 relative z-10 animate-fade-up flex items-center gap-3 font-semibold">
+        <span className="inline-block w-3 h-3 rounded-full bg-[#0D0D0D] animate-pulse-dot" />
+        <span>Nairobi · Urban Design · Spatial Storytelling · GPS 1°17'S 36°49'E</span>
       </div>
 
-      {/* Hero Title */}
-      <h1 className="font-[Bebas_Neue] text-[clamp(60px,12vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 animate-fade-up">
+      {/* Hero Main Headline */}
+      <h1 className="font-['Bebas_Neue',sans-serif] text-[clamp(60px,12vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 animate-fade-up drop-shadow-sm">
         NAIROBI
         <br />
         <span className="text-outline-ink">BY</span>
@@ -60,7 +71,7 @@ export default function Hero() {
       </h1>
 
       {/* City SVG - KICC Silhouette */}
-      <div className="absolute bottom-[290px] left-4/5 -translate-x-1/2 w-[min(900px,90vw)] pointer-events-none opacity-100 z-1 animate-city-rise">
+      <div className="absolute bottom-[290px] left-4/5 -translate-x-1/2 w-[min(900px,90vw)] pointer-events-none opacity-100 z-2 animate-city-rise">
         <svg
           viewBox="0 0 900 340"
           xmlns="http://www.w3.org/2000/svg"
@@ -192,24 +203,27 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Hero Bottom Bar */}
+      {/* Hero Bottom Bar & Tagline */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end relative z-10 animate-fade-up gap-6 sm:gap-0">
-        <div className="font-['Fraunces',serif] italic text-[clamp(20px,2vw,38px)] leading-[1.2] max-w-[520px] text-[#0D0D0D]">
+        <div className="font-['Fraunces',serif] italic text-[clamp(20px,2vw,38px)] leading-[1.2] max-w-[540px] text-[#0D0D0D]">
           Come understand the
           <br />
-          <em className="not-italic underline underline-offset-4 decoration-[#0D0D0D]">
+          <em className="not-italic underline underline-offset-4 decoration-[#0D0D0D] font-bold">
             urban language
           </em>{" "}
           of Nairobi.
         </div>
-        <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-[#0D0D0D] opacity-50 flex items-center gap-2.5">
-          <span className="block w-[1px] h-[48px] bg-[#0D0D0D] opacity-40" />
-          Scroll to explore
-        </div>
+        <a
+          href="#tours"
+          className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#0D0D0D] opacity-80 flex items-center gap-2.5 hover:opacity-100 transition-opacity text-decoration-none group"
+        >
+          <span className="block w-[1px] h-[48px] bg-[#0D0D0D] group-hover:h-[60px] transition-all" />
+          <span>Scroll to explore ↓</span>
+        </a>
       </div>
 
       {/* Bottom Rule */}
-      <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-[#0D0D0D]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-[#0D0D0D] z-10" />
     </section>
   );
 }

@@ -36,7 +36,7 @@ export default function Founder() {
             <div className="border border-[#1A1A1A] p-3 bg-transparent shadow-sm overflow-hidden group">
               <div className="overflow-hidden aspect-[4/5] relative">
                 <img
-                  src="/profile.jpg"
+                  src="/images/walk5.jpeg"
                   alt="Brenda Ngoya — Founder & Spatial Storyteller"
                   className="w-full h-full object-cover object-center grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
