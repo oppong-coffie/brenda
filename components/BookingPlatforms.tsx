@@ -28,7 +28,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
       desc: "Message directly for group bookings, bespoke enquiries, or any questions.",
       badge: "• Live Now",
       isLive: false,
-      url: "https://wa.me/+254796941671",
+      url: "https://wa.me/+254728300483",
     },
     {
       icon: "🌍",
@@ -44,7 +44,7 @@ export default function BookingPlatforms({ onSelectPlatform }: BookingPlatformsP
       desc: "Find us and leave a review after your walk. Reviews help more people discover NBO.",
       badge: "• Live Now",
       isLive: false,
-      url: "https://www.tripadvisor.com/",
+      url: "https://www.tripadvisor.co.nz/Attraction_Review-g294207-d34280185-Reviews-NBO_by_Design-Nairobi.html",
     },
   ];
 

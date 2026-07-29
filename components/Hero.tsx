@@ -2,25 +2,25 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-6 md:px-13 pb-10 pt-28 border-b-2 border-[#0D0D0D]"
+      className="min-h-[80vh] sm:min-h-screen bg-[#C9963A] relative overflow-hidden flex flex-col justify-end px-5 sm:px-6 md:px-13 pb-6 sm:pb-10 pt-18 sm:pt-28 border-b-2 border-[#0D0D0D]"
     >
       {/* Background /splashimage.avif with Ken Burns animation */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
           src="/splashimage.avif"
           alt="Nairobi Urban Design Splash Visual"
-          className="w-full h-full object-cover animate-ken-burns filter brightness-95 contrast-105 opacity-30 mix-blend-overlay"
+          className="w-full h-full object-cover animate-ken-burns filter brightness-95 contrast-105 opacity-25 sm:opacity-30 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#C9963A] via-[#C9963A]/90 to-[#C9963A]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#C9963A] via-[#C9963A]/95 to-[#C9963A]/70" />
       </div>
 
       {/* Contour lines background overlay */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-1">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-1 opacity-60 sm:opacity-100">
         <svg
           className="w-full h-full"
           viewBox="0 0 1400 900"
           fill="none"
-          preserveAspectRatio="xMidYMid slice"
+          preserveAspectRatio="xMidYMin slice"
         >
           <g stroke="#0D0D0D" strokeWidth="0.7" opacity="0.08">
             <ellipse cx="1050" cy="380" rx="500" ry="220" />
@@ -42,13 +42,13 @@ export default function Hero() {
 
       {/* Big ghost text */}
       <div
-        className="absolute top-1/2 -left-2.5 -translate-y-1/2 font-['Bebas_Neue',sans-serif] text-[clamp(220px,28vw,400px)] leading-[0.82] text-transparent text-outline-ghost pointer-events-none select-none tracking-[0.02em] whitespace-nowrap z-1"
+        className="absolute top-1/2 -left-2.5 -translate-y-1/2 font-['Bebas_Neue',sans-serif] text-[clamp(110px,25vw,400px)] leading-[0.82] text-transparent text-outline-ghost pointer-events-none select-none tracking-[0.02em] whitespace-nowrap z-1 opacity-40 sm:opacity-100"
       >
         NBO
       </div>
 
       {/* Floating Live Stamp Badge */}
-      <div className="absolute top-28 right-8 md:right-16 z-20 animate-float-slow hidden sm:flex flex-col items-center justify-center w-28 h-28 rounded-full border-2 border-[#0D0D0D] bg-[#EDE6D6]/80 backdrop-blur-sm text-center p-2 shadow-xl hover:scale-105 transition-transform cursor-pointer">
+      <div className="absolute top-24 right-4 sm:top-28 sm:right-8 md:right-16 z-20 animate-float-slow hidden sm:flex flex-col items-center justify-center w-28 h-28 rounded-full border-2 border-[#0D0D0D] bg-[#EDE6D6]/80 backdrop-blur-sm text-center p-2 shadow-xl hover:scale-105 transition-transform cursor-pointer">
         <span className="font-mono text-[8px] uppercase tracking-widest text-[#0D0D0D]/80 font-bold">Nairobi</span>
         <span className="font-['Caveat',cursive] text-xl font-bold text-[#0D0D0D] leading-none">Walks</span>
         <span className="font-mono text-[7.5px] uppercase tracking-wider text-[#0D0D0D] font-bold">Est 2025</span>
@@ -56,13 +56,13 @@ export default function Hero() {
       </div>
 
       {/* Hero Header Meta Tag */}
-      <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[#0D0D0D] opacity-90 mb-4 relative z-10 animate-fade-up flex items-center gap-3 font-semibold">
-        <span className="inline-block w-3 h-3 rounded-full bg-[#0D0D0D] animate-pulse-dot" />
-        <span>Nairobi · Urban Design · Spatial Storytelling · GPS 1°17'S 36°49'E</span>
+      <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#0D0D0D] mb-3 sm:mb-4 relative z-10 animate-fade-up inline-flex items-center gap-2 sm:gap-3 font-semibold bg-[#EDE6D6]/70 sm:bg-transparent backdrop-blur-[2px] sm:backdrop-blur-none px-3 py-1.5 sm:p-0 rounded-full border border-[#0D0D0D]/20 sm:border-none w-fit max-w-full">
+        <span className="inline-block w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#0D0D0D] animate-pulse-dot shrink-0" />
+        <span className="truncate sm:whitespace-normal">Nairobi · Urban Design · Spatial Storytelling · GPS 1°17'S 36°49'E</span>
       </div>
 
       {/* Hero Main Headline */}
-      <h1 className="font-['Bebas_Neue',sans-serif] text-[clamp(60px,12vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 animate-fade-up drop-shadow-sm">
+      <h1 className="font-['Bebas_Neue',sans-serif] text-[clamp(52px,13vw,190px)] leading-[0.85] tracking-[0.02em] text-[#0D0D0D] relative z-10 animate-fade-up drop-shadow-sm">
         NAIROBI
         <br />
         <span className="text-outline-ink">BY</span>
@@ -71,7 +71,7 @@ export default function Hero() {
       </h1>
 
       {/* City SVG - KICC Silhouette */}
-      <div className="absolute bottom-[290px] left-4/5 -translate-x-1/2 w-[min(900px,90vw)] pointer-events-none opacity-100 z-2 animate-city-rise">
+      <div className="absolute bottom-[340px] sm:bottom-[310px] md:bottom-[290px] left-[85%] sm:left-4/5 -translate-x-1/2 w-[280px] sm:w-[500px] md:w-[min(900px,90vw)] pointer-events-none opacity-25 sm:opacity-50 md:opacity-100 z-2 animate-city-rise">
         <svg
           viewBox="0 0 900 340"
           xmlns="http://www.w3.org/2000/svg"

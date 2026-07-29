@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Fraunces, Caveat, Space_Mono } from "next/font/google";
+import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -29,16 +30,34 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NBO by Design — Nairobi's Urban Story",
+  metadataBase: new URL("https://nbobydesign.com"),
+  title: {
+    default: "NBO by Design — Nairobi's Urban Story",
+    template: "%s | NBO by Design"
+  },
   description: "NBO by Design is a social enterprise using spatial storytelling, walking tours, and public discourse to explore Nairobi's architectural history, spatial politics, and urban soul.",
-  keywords: ["Nairobi walking tours", "NBO by Design", "Nairobi urban design", "KICC Nairobi", "Brenda Ngoya", "Kenya architecture", "Urban literacy Nairobi"],
+  keywords: ["NBO, Nairobi walking tours", "NBO by Design", "Nairobi urban design", "KICC Nairobi", "Brenda Ngoya", "Kenya architecture", "Urban literacy Nairobi"],
   authors: [{ name: "Brenda Ngoya" }],
   openGraph: {
     title: "NBO by Design — Nairobi's Urban Story",
-    description: "Expert-led walking tours and urban literacy in Nairobi, Kenya.",
-    type: "website",
-    locale: "en_KE",
+    description: "Expert-led building tours and urban literacy in Nairobi, Kenya.",
+    url: "https://nbobydesign.com",
     siteName: "NBO by Design",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_KE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NBO by Design — Nairobi's Urban Story",
+    description: "Expert-led building tours and urban literacy in Nairobi, Kenya.",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -47,37 +66,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "NBO by Design — Nairobi Walking Tours",
-    "description": "Expert-led architectural walking tours and urban literacy in Nairobi, Kenya.",
-    "location": {
-      "@type": "Place",
-      "name": "Nairobi CBD",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      }
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": "NBO by Design",
-      "url": "https://nbo-by-design.com"
-    }
-  };
-
   return (
     <html
       lang="en"
       className={`${bebasNeue.variable} ${fraunces.variable} ${caveat.variable} ${spaceMono.variable} scroll-smooth`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <StructuredData />
       </head>
       <body className="min-h-screen bg-[#F4EFE4] text-[#0D0D0D] font-mono selection:bg-[#C9963A] selection:text-[#0D0D0D]">
         {children}

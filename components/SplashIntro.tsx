@@ -77,9 +77,6 @@ export default function SplashIntro({ onComplete }: SplashIntroProps) {
             NBO <span className="text-[#C9963A]">BY</span> DESIGN
           </h1>
 
-          <p className="font-['Fraunces',serif] italic text-sm sm:text-base text-[#A09C92] max-w-xs mx-auto leading-relaxed">
-            Spatial Storytelling, Building Tours & Urban Literacy
-          </p>
         </div>
       </div>
     </div>
